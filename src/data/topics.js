@@ -1,4 +1,5 @@
 export const topics = [
+  { id: 'nst-maths', name: 'NST Mathematics (Part IA)', slug: 'NSTMaths' },
   { id: 'databases', name: 'Databases', slug: 'Databases' },
   { id: 'digital-electronics', name: 'Digital Electronics', slug: 'DigitalElectronics' },
   { id: 'discrete-mathematics', name: 'Discrete Mathematics', slug: 'DiscreteMathematics' },
@@ -11,5 +12,4 @@ export const topics = [
   { id: 'interaction-design', name: 'Interaction Design', slug: 'InteractionDesign' },
   { id: 'probability', name: 'Introduction to Probability', slug: 'IntroductiontoProbability' },
   { id: 'software-security', name: 'Software and Security Engineering', slug: 'SoftwareandSecurityEngineering' },
-  { id: 'nst-maths', name: 'NST Mathematics (Part IA)', slug: 'NSTMaths' },
 ];

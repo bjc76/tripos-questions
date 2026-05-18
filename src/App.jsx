@@ -213,7 +213,7 @@ export default function App() {
                                   className="focus:outline-none transition-transform active:scale-90"
                                 >
                                   {isDone ? (
-                                    <div className="w-7 h-7 bg-cambridge rounded-full flex items-center justify-center shadow-sm shadow-cambridge/30">
+                                    <div className="w-7 h-7 bg-cambridge-dark rounded-full flex items-center justify-center shadow-sm shadow-cambridge-dark/30">
                                       <CheckCircle2 className="w-4 h-4 text-white" />
                                     </div>
                                   ) : (
