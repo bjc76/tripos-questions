@@ -32,6 +32,15 @@ export default function App() {
   const selectedTopic = topics.find(t => t.id === selectedTopicId);
   const questions = questionsByTopic[selectedTopicId] || [];
 
+  const yearRange = useMemo(() => {
+    if (questions.length === 0) return null;
+    const years = questions.map(q => q.year);
+    return {
+      min: Math.min(...years),
+      max: Math.max(...years)
+    };
+  }, [questions]);
+
   const filteredTopics = topics.filter(t => 
     t.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -151,11 +160,13 @@ export default function App() {
               </div>
               <h2 className="text-4xl font-serif font-bold text-gray-900 leading-tight">{selectedTopic?.name}</h2>
               <div className="flex items-center gap-4 mt-4">
-                <div className="flex items-center gap-1.5 text-xs text-gray-400">
-                  <History className="w-3.5 h-3.5" />
-                  Historical coverage: 1993 – 2025
-                </div>
-                <div className="w-1 h-1 rounded-full bg-gray-200" />
+                {yearRange && (
+                  <div className="flex items-center gap-1.5 text-xs text-gray-400">
+                    <History className="w-3.5 h-3.5" />
+                    Historical coverage: {yearRange.min} – {yearRange.max}
+                  </div>
+                )}
+                {yearRange && <div className="w-1 h-1 rounded-full bg-gray-200" />}
                 <div className="text-xs text-gray-400">
                   {questions.length} total questions
                 </div>
