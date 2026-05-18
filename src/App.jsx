@@ -75,7 +75,7 @@ export default function App() {
             </div>
             <div>
               <h1 className="text-xl font-serif font-bold tracking-tight text-gray-900">Tripos Tracker</h1>
-              <p className="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold mt-0.5">University of Cambridge</p>
+              <p className="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold mt-0.5">Ben Crook</p>
             </div>
           </div>
 
