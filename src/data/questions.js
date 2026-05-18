@@ -5,7 +5,8 @@ const pad = (num) => num.toString().padStart(2, '0');
 
 export const getPdfUrl = (year, paper, question, topicId) => {
   if (topicId === 'nst-maths') {
-    return `https://www.maths.cam.ac.uk/undergradnst/pastpapers/${year}/ia_${paper}.pdf`;
+    // Correct link structure for NST Maths: https://www.maths.cam.ac.uk/undergradnst/files/2024/papernst_ia_1_2024.pdf
+    return `https://www.maths.cam.ac.uk/undergradnst/files/${year}/papernst_ia_${paper}_${year}.pdf`;
   }
   return `${BASE_PDF_URL}y${year}p${paper}q${question}.pdf`;
 };
@@ -69,19 +70,19 @@ export const questionsByTopic = {
     { start: 2006, end: 2025, questions: [{ p: 3, q: 5 }, { p: 3, q: 6 }] },
   ]),
   'software-security': generateQuestions('software-security', [
-    { start: 2006, end: 2025, questions: [{ p: 3, q: 7 }, { p: 3, q: 8 }] },
+    { start: 2006, end: 2025, questions: [{ p: 2, q: 5 }, { p: 2, q: 6 }] }, // Corrected from P3 to P2
   ]),
   probability: generateQuestions('probability', [
-    { start: 2006, end: 2025, questions: [{ p: 3, q: 9 }, { p: 3, q: 10 }] },
+    { start: 2006, end: 2025, questions: [{ p: 1, q: 5 }, { p: 1, q: 6 }] }, // Corrected from P3 to P1
   ]),
   oop: generateQuestions('oop', [
-    { start: 2006, end: 2025, questions: [{ p: 1, q: 5 }, { p: 1, q: 6 }] },
+    { start: 2006, end: 2025, questions: [{ p: 1, q: 3 }, { p: 1, q: 4 }] }, // Corrected from Q5 to Q3,4
   ]),
   graphics: generateQuestions('graphics', [
-    { start: 2006, end: 2025, questions: [{ p: 1, q: 9 }, { p: 1, q: 10 }] },
+    { start: 2006, end: 2025, questions: [{ p: 3, q: 3 }, { p: 3, q: 4 }] }, // Corrected from P1 to P3
   ]),
   'machine-learning': generateQuestions('machine-learning', [
-    { start: 2006, end: 2025, questions: [{ p: 2, q: 5 }, { p: 2, q: 6 }] },
+    { start: 2006, end: 2025, questions: [{ p: 3, q: 7 }, { p: 3, q: 8 }, { p: 3, q: 9 }] }, // Corrected from P2 to P3
   ]),
   'nst-maths': generateQuestions('nst-maths', [
     { start: 2001, end: 2025, questions: [{ p: 1, q: 'Full' }, { p: 2, q: 'Full' }] },
