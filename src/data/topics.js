@@ -1,0 +1,15 @@
+export const topics = [
+  { id: 'databases', name: 'Databases', slug: 'Databases' },
+  { id: 'digital-electronics', name: 'Digital Electronics', slug: 'DigitalElectronics' },
+  { id: 'discrete-mathematics', name: 'Discrete Mathematics', slug: 'DiscreteMathematics' },
+  { id: 'focs', name: 'Foundations of Computer Science', slug: 'FoundationsofComputerScience' },
+  { id: 'algorithms', name: 'Algorithms', slug: 'Algorithms' },
+  { id: 'graphics', name: 'Introduction to Graphics', slug: 'IntroductiontoGraphics' },
+  { id: 'oop', name: 'Object-Oriented Programming', slug: 'Object-OrientedProgramming' },
+  { id: 'machine-learning', name: 'Machine Learning and Real-world Data', slug: 'MachineLearningandReal-worldData' },
+  { id: 'operating-systems', name: 'Operating Systems', slug: 'OperatingSystems' },
+  { id: 'interaction-design', name: 'Interaction Design', slug: 'InteractionDesign' },
+  { id: 'probability', name: 'Introduction to Probability', slug: 'IntroductiontoProbability' },
+  { id: 'software-security', name: 'Software and Security Engineering', slug: 'SoftwareandSecurityEngineering' },
+  { id: 'nst-maths', name: 'NST Mathematics (Part IA)', slug: 'NSTMaths' },
+];
