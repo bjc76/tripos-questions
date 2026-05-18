@@ -1,0 +1,9 @@
+name = "tripos-questions"
+compatibility_date = "2026-05-18"
+
+[assets]
+directory = "dist"
+
+[site]
+bucket = "dist"
+entry-point = "dist"
