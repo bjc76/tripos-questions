@@ -5,8 +5,22 @@ const pad = (num) => num.toString().padStart(2, '0');
 
 export const getPdfUrl = (year, paper, question, topicId) => {
   if (topicId === 'nst-maths') {
-    // Correct link structure for NST Maths: https://www.maths.cam.ac.uk/undergradnst/files/2024/papernst_ia_1_2024.pdf
-    return `https://www.maths.cam.ac.uk/undergradnst/files/${year}/papernst_ia_${paper}_${year}.pdf`;
+    let filename;
+    if (year <= 2015) {
+      filename = `PaperNST_IA_${paper}.pdf`;
+    } else if (year === 2016) {
+      filename = `papernst_ia_${paper}.pdf`;
+    } else if (year === 2017) {
+      filename = `papernst_ia_${paper}_0.pdf`;
+    } else {
+      filename = `papernst_ia_${paper}_${year}.pdf`;
+    }
+    // Correct link structure for NST Maths:
+    // https://www.maths.cam.ac.uk/undergradnst/files/2015/PaperNST_IA_1.pdf
+    // https://www.maths.cam.ac.uk/undergradnst/files/2016/papernst_ia_1.pdf
+    // https://www.maths.cam.ac.uk/undergradnst/files/2017/papernst_ia_1_0.pdf
+    // https://www.maths.cam.ac.uk/undergradnst/files/2024/papernst_ia_1_2024.pdf
+    return `https://www.maths.cam.ac.uk/undergradnst/files/${year}/${filename}`;
   }
   return `${BASE_PDF_URL}y${year}p${paper}q${question}.pdf`;
 };
